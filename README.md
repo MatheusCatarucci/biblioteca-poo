@@ -71,4 +71,4 @@ A conta com a função de usuário só poderá listar, emprestar ou devolver liv
 1 - `listar_por_genero(lista_livros, genero)` → retorna todos os livros de um gênero específico;
 2 - `listar_por_autor(lista_livros, autor)` → retorna todos os livros de determinado autor;
 3 - `listar_emprestados(lista_livros)` → retorna apenas os livros que estão emprestados.
-A conta com a função de usuário só poderá listar, emprestar ou devolver livros. Não será possível fazer a edição, remoção ou criação de livros a não se for um administrador.
+
