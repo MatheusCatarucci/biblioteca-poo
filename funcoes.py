@@ -1,5 +1,9 @@
 import os
 from livros import *
+
+def limpar_tela():
+    os.system("cls")
+
 def emprestimos(biblioteca):
     while True:
         os.system("cls")
@@ -56,4 +60,3 @@ def devolucao(livros):
             print("Livro não encontrado. Verifique os detalhes e tente novamente.")
         input("Pressione Enter para continuar...")
         break
-
