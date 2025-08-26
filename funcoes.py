@@ -1,6 +1,6 @@
 import os
 from livros import *
-def emprestimos(biblioteca):
+def emprestimo(biblioteca):
     while True:
         os.system("cls")
         print(" ____________________________\n |                          |\n |                          |\n |   Empréstimo dos Livros  |\n |                          |\n |__________________________|")
@@ -13,14 +13,14 @@ def emprestimos(biblioteca):
             autor=input("Autor do livro:\n-->")
             os.system("cls")
             for livro in biblioteca:
-                if (livro.nome.lower() == nome_do_livro.lower()
-                    and livro.autor.lower() == autor.lower()
-                    and livro.genero == genero):
+                if (livro.nome.lower()==nome_do_livro.lower()
+                    and livro.autor.lower()==autor.lower()
+                    and livro.genero==genero):
                     if livro.disponivel:
                         print(f"O livro '{livro.nome}' de {livro.autor} está disponível para empréstimo.")
-                        confirmar = input("Deseja emprestar este livro? (Sim/Não): ").strip().lower()
-                        if confirmar == "sim":
-                            livro.disponivel = False
+                        confirmar=input("Deseja emprestar este livro? (Sim/Não): ").strip().lower()
+                        if confirmar=="sim":
+                            livro.disponivel=False
                             print(f"Você emprestou o livro '{livro.nome}'. Aproveite a leitura!")
                         else:
                             print("Empréstimo cancelado.")
@@ -30,7 +30,7 @@ def emprestimos(biblioteca):
             else:
                 print("Livro não encontrado. Verifique os detalhes e tente novamente.")
             input("Pressione Enter para continuar...")
-        elif genero == 0:
+        elif genero==0:
             break
         else:
             print("Opção inválida. Tente novamente.")
@@ -38,21 +38,23 @@ def emprestimos(biblioteca):
 def devolucao(livros):
     while True:
         os.system("cls")
-        print(" ____________________________\n |                          |\n |                          |\n |     Devolução dos Livros  |\n |                          |\n |__________________________|")
-        print("")
-        nome_do_livro = input("Nome do livro que você deseja devolver:\n-->")
+        print(" ____________________________\n |                          |\n |                          |\n |     Devolução dos Livros |\n |                          |\n |__________________________|")
+        nome_do_livro=input("Nome do livro que você deseja devolver:\n--> ")
         os.system("cls")
-        autor = input("Autor do livro que você irá devolver:\n-->")
+        autor = input("Autor do livro que você irá devolver:\n--> ")
         os.system("cls")
-        for livro in livros:
-            if livro.nome.lower() == nome_do_livro.lower() and livro.autor.lower() == autor.lower():
-                if not livro.disponivel:
-                    livro.disponivel = True
-                    print(f"Você devolveu o livro '{livro.nome}'. Obrigado!")
+        achado=False
+        for livros in livros:
+            if livros.nome.lower()==nome_do_livro.lower() and livros.autor.lower()==autor.lower():
+                encontrado=True
+                if not livros.disponivel:
+                    livros.disponivel=True
+                    print(f"Você devolveu o livro '{livros.nome}'. Obrigado!")
                 else:
-                    print(f"O livro '{livro.nome}' já está disponível na biblioteca.")
+                    print(f"O livro '{livros.nome}' já está disponível na biblioteca.")
                 break
-        else:
+        if not encontrado:
             print("Livro não encontrado. Verifique os detalhes e tente novamente.")
-        input("Pressione Enter para continuar...")
-        break
+        continuar=input("Deseja devolver outro livro? (Sim/Não): ").strip().lower()
+        if continuar!="sim":
+            break
