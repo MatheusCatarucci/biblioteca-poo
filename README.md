@@ -12,4 +12,6 @@ Utilizaremos o arquivo "funcoes.py" manipular a lista de livros, ou seja:
     3. Listar livros
     4. Separar por gênero, autor ou livros emprestados
 #### 3 - main.py 🚀
-Arquivo principal do sistema, onde tudo será condicionado a inicializar o sistema.
+Arquivo principal do sistema, onde tudo será condicionado a inicializar o sistema usando os outros arquivos.
+#### 4 - README.md 📃
+Documentação completa do projeto. Explicando cada detalhe registrado na programação.
