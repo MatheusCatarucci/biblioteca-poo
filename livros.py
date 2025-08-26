@@ -1,22 +1,25 @@
 class Livro:
     #Construtor -> Define os atributos -> Propriedades
-    def __init__(self, titulo, autor, genero, status):
+    def __init__(self, nome, autor, genero, status):
 
-        self.__titulo = titulo
+        self.__nome = nome
         self.__autor = autor
         self.__genero = genero
         self.__status = status
     # -----------------------------------------------------------------------
-    # Métodos -> Definem os 
-    def getTitulo(self):
-        return self.__titulo
+    # Métodos -> 
+    def getNome(self):
+        return self.__nome
     def getAutor(self):
         return self.__autor
     def getGenero(self):
         return self.__genero
     def getStatus(self):
         return self.__status
+    # -----------------------------------------------------------------------
+    # Set's
 
+    # -----------------------------------------------------------------------
 biblioteca = {
     # Ficção Literária
     1 : Livro("Dom Casmurro", "Machado de Assis", "Ficção Literária", True),
