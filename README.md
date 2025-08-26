@@ -36,6 +36,6 @@ Essas funções foram criadas para facilitar a busca e organização dos livros 
 ### 4️⃣: **Contas: ADM e Usuário** 🛠️
 #### 4.1: **Contas: ADM** 👤📚
 A conta com a função de Administrador será nosso construtor para criar, editar ou remover os livros. Ou seja, a pessoa que tiver o acesso e o poder administrativo desta conta, terá a liberdade para fazer tais funções mencionadas. Além de também poder emprestar, devolver e listar livros.
-#### 4.2: **Contas: Bibliotecário** 🧑📚
+#### 4.2: **Contas: Usuário** 🧑📚
 A conta com a função de bibliotecário só poderá listar, emprestar ou devolver livros. Não será possível fazer a edição, remoção ou criação de livros a não se for um administrador.
 
