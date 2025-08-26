@@ -63,10 +63,10 @@ A conta com a função de Administrador para criar, editar ou remover os livros.
 A conta com a função de usuário só poderá listar, emprestar ou devolver livros. Não será possível fazer a edição, remoção ou criação de livros a não se for um administrador.
 ### Funcionalidades ⚙️
 #### Classes de livros 📘📗📕📒📔
-    1 - Construtor para criar os livros;
-    2 - Métodos **GET**: acessar título, autor, gênero e situação do livro;
-    3 - Métodos **SET**: atualizar informações do livro;
-    4 - Métodos de **empréstimo e devolução**.
+1. Construtor para criar os livros;
+2. Métodos **GET**: acessar título, autor, gênero e situação do livro;
+3. Métodos **SET**: atualizar informações do livro;
+4. Métodos de **empréstimo e devolução**.
 ### **Funções Auxiliares**
 Essas funções foram criadas para facilitar a busca e organização dos livros dentro do sistema, permitindo filtrar por gênero, autor ou status de empréstimo:
 #### 1. listar_por_genero(lista_livros, genero)`
