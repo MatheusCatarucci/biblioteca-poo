@@ -6,7 +6,7 @@ class Livro:
         self.__genero = genero
         self.__status = status
     # -----------------------------------------------------------------------
-    # Métodos
+    # Métodos -> Definem os 
     def getTitulo(self):
         return self.__titulo
     def getAutor(self):
