@@ -5,7 +5,7 @@ def emprestimos(biblioteca):
         os.system("cls")
         print(" ____________________________\n |                          |\n |                          |\n |   Empréstimo dos Livros  |\n |                          |\n |__________________________|")
         print("")
-        genero = int(input("Gêneros Disponiveis:\nNª1 - Ficção Literaria\nNº2 - Fantasia\nNº3 - Mistério / Suspense\nN4º - Romance\nNº5 - Clássicos Universais\nNº6 -  Ficção Científica\nNº7 - Drama / Sociedade\nNº8 - Não Ficção\nNº9 - Filosofia / Psicologia\nNº0 - Sair\n--> "))
+        genero = int(input("Gêneros Disponiveis:\nNª1 - Ficção Literaria\nNº2 - Fantasia\nNº3 - Mistério / Suspense\nNº4 - Romance\nNº5 - Clássicos Universais\nNº6 -  Ficção Científica\nNº7 - Drama / Sociedade\nNº8 - Não Ficção\nNº9 - Filosofia / Psicologia\nNº0 - Sair\n--> "))
         os.system("cls")
         if genero > 0 and genero < 10:
             nome_do_livro=input("Nome do livro:\n-->")
