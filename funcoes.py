@@ -1,8 +1,6 @@
 import os
 from livros import *
 
-def empretimos(livros):
-
 def emprestimos(biblioteca):
     while True:
         os.system("cls")
@@ -38,25 +36,3 @@ def emprestimos(biblioteca):
         else:
             print("Opção inválida. Tente novamente.")
             input("Pressione Enter para continuar...")
-def devolucao(livros):
-    while True:
-        os.system("cls")
-        print(" ____________________________\n |                          |\n |                          |\n |     Devolução dos Livros  |\n |                          |\n |__________________________|")
-        print("")
-        nome_do_livro = input("Nome do livro que você deseja devolver:\n-->")
-        os.system("cls")
-        autor = input("Autor do livro que você irá devolver:\n-->")
-        os.system("cls")
-        for livro in livros:
-            if livro.nome.lower() == nome_do_livro.lower() and livro.autor.lower() == autor.lower():
-                if not livro.disponivel:
-                    livro.disponivel = True
-                    print(f"Você devolveu o livro '{livro.nome}'. Obrigado!")
-                else:
-                    print(f"O livro '{livro.nome}' já está disponível na biblioteca.")
-                break
-        else:
-            print("Livro não encontrado. Verifique os detalhes e tente novamente.")
-        input("Pressione Enter para continuar...")
-        break
-
