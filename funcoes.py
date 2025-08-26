@@ -1,10 +1,9 @@
 import os
 from livros import *
-<<<<<<< HEAD
+
 def empretimos(livros):
-=======
+
 def emprestimos(biblioteca):
->>>>>>> 4505b8a1590c36ad99c5746f39af03dd3b8c090d
     while True:
         os.system("cls")
         print(" ____________________________\n |                          |\n |                          |\n |   Empréstimo dos Livros  |\n |                          |\n |__________________________|")
