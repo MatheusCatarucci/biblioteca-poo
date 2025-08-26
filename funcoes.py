@@ -61,6 +61,21 @@ def listagem():
         print("Escolha inválida")
         os.system("pause")
 
+def editar_detalhes():
+    for chave, Livro in biblioteca.items():
+        print(50 * "-")
+        print(f"ID: {chave}".center(50))
+        print(50 * "-")
+        print(f"Título: {Livro.getNome()}")
+        print(f"Autor: {Livro.getAutor()}")
+        print(f"Gênero: {Livro.getGenero()}")
+        if Livro.getStatus():
+            print("Livro disponível para troca")
+        else:
+            print("Livro indisponível para troca")
+    print(50 * "-")
+    print("Selecione um livro para editar")
+
 def menu():
     while True:
         limpar_tela()
@@ -84,7 +99,7 @@ def menu():
         elif escolha == 4:
             pass
         elif escolha == 5:
-            pass
+            editar_detalhes()
         elif escolha == 6:
             pass
         elif escolha == 7:
