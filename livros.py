@@ -1,5 +1,5 @@
 class Livro:
-    #Construtor -> Define os atributos
+    #Construtor -> Define os atributos -> Propriedades
     def __init__(self, titulo, autor, genero, status):
         self.__titulo = titulo
         self.__autor = autor
