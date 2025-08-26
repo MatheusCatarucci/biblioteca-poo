@@ -39,4 +39,3 @@ A conta com a função de Administrador será nosso construtor para criar, edita
 #### 4.2: **Contas: Usuário** 🧑📚
 A conta com a função de usuário só poderá listar, emprestar ou devolver livros. Não será possível fazer a edição, remoção ou criação de livros a não se for um administrador.
 
-![Colhedor de Cana](/imagens/joao.jfif)
