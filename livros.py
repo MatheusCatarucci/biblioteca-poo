@@ -1,6 +1,6 @@
 class Livro:
-    #Construtor -> Define os atributos
-    def __init__(self, titulo, autor, genero, status):
+    #Construtor
+    def _init_(self, titulo, autor, genero, status):
         self.__titulo = titulo
         self.__autor = autor
         self.__genero = genero
@@ -15,3 +15,10 @@ class Livro:
         return self.__genero
     def getStatus(self):
         return self.__status
+    
+
+Biblioteca = {
+    '1': Livro('Senhor dos Anéis: A Sociedade do Anel', 'J.R.R. Tolkien', 'Fantasia', True),
+    '2': Livro('Harry Potter e a Pedra Filosofal', 'J.K. Rowling', 'Fantasia', False),
+    '3': Livro('A Guerra dos Tronos', 'George R.R. Martin', 'Fantasia', True)
+}
