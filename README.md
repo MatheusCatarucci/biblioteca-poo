@@ -37,4 +37,4 @@ Essas funções foram criadas para facilitar a busca e organização dos livros 
 2. Matheus: Parte de instanciar classes e formatação lógica; 
 3. Moisés: Sets - Adicionar e editar livros;
 4. Gabriel: Editar e Formatar os livros emprestados e devolvidos;
-5. João Vitor: Documentação do projeto no README.md 
+5. João Vitor: Documentação do projeto no README.md
