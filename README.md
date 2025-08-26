@@ -68,7 +68,8 @@ A conta com a função de usuário só poderá listar, emprestar ou devolver liv
 3 - Métodos **SET**: atualizar informações do livro;
 4 - Métodos de **empréstimo e devolução**.
 #### **Funções Auxiliares**
-1 - `listar_por_genero(lista_livros, genero)` → retorna todos os livros de um gênero específico;
-2 - `listar_por_autor(lista_livros, autor)` → retorna todos os livros de determinado autor;
-3 - `listar_emprestados(lista_livros)` → retorna apenas os livros que estão emprestados.
+Essas funções foram criadas para facilitar a busca e organização dos livros dentro do sistema, permitindo filtrar por gênero, autor ou status de empréstimo:
+    1. `listar_por_genero(lista_livros, genero)` → retorna todos os livros de um gênero específico;
+    2. `listar_por_autor(lista_livros, autor)` → retorna todos os livros de determinado autor;
+    3. `listar_emprestados(lista_livros)` → retorna apenas os livros que estão emprestados.
 
