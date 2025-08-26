@@ -31,3 +31,4 @@ Essas funções foram criadas para facilitar a busca e organização dos livros 
 1. `listar_por_genero(lista_livros, genero)` → Retorna todos os livros de um gênero específico;
 2. `listar_por_autor(lista_livros, autor)` → Retorna todos os livros de determinado autor;
 3. `listar_emprestados(lista_livros)`→ Retorna apenas os livros que estão emprestados.
+
