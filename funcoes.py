@@ -27,3 +27,4 @@ def empretimos(livros):
                     else:
                         print(f"Desculpe, o livro '{livro.nome}' de {livro.autor} não está disponível no momento.")
                     break
+                print("bsdgvfijdosakp")
