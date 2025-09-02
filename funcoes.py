@@ -1,5 +1,5 @@
 import os
-from livros import biblioteca
+from livros import *
 
 # Função para limpar a tela do terminal
 def limpar_tela():
@@ -48,7 +48,7 @@ def ListagemDisponiveis():
             print(f"ID: [{chave}] || Livro: {Livro.getNome()} - {Livro.getAutor()}")
 
 
-def ListagemImprestados():
+def ListagemEmprestados():
     print('Livros emprestados:')
     for chave, Livro in biblioteca.items():
         if not Livro.getStatus():
@@ -89,7 +89,7 @@ def devolucao():
     while True:
         limpar_tela()
         print("=== Devolução de Livros ===")
-        ListagemImprestados()
+        ListagemEmprestados()
         try:
             id_do_livro = int(input("Insira o ID do livro que você deseja devolver:\n--> "))
         except ValueError:

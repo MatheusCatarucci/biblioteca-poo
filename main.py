@@ -1,6 +1,6 @@
 # Arquivo principal que inicia o sistema
-
-from funcoes import menu
+from livros import *
+from funcoes import *
 
 # Inicia o menu principal
 menu()
