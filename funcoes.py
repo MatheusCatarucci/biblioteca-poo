@@ -95,3 +95,46 @@ def devolucao():
     if continuar != "sim":
         return
 
+def menu():
+    while True:
+        os.system("cls")
+        print("="*40)
+        print("         SISTEMA BIBLIOTECA  ")
+        print("="*40)
+        print("1 - Listar todos os livros")
+        print("2 - Listar livros por autor")
+        print("3 - Listar livros por gênero")
+        print("4 - Listar livros disponíveis")
+        print("5 - Realizar empréstimo")
+        print("6 - Realizar devolução")
+        print("0 - Sair")
+        print("="*40)
+
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == "1":
+            os.system("cls")
+            ListagemPorID()
+            os.system('pause')
+        elif opcao == "2":
+            os.system("cls")
+            ListagemAutor()
+            os.system('pause')
+        elif opcao == "3":
+            os.system("cls")
+            ListagemGenero()
+            os.system('pause')
+        elif opcao == "4":
+            os.system("cls")
+            ListagemDisponiveis()
+            os.system('pause')
+        elif opcao == "5":
+            emprestimos()
+        elif opcao == "6":
+            devolucao()
+        elif opcao == "0":
+            print("Saindo do sistema... até logo!")
+            break
+        else:
+            print("Opção inválida! Tente novamente.")
+            os.system('pause')
