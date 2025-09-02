@@ -33,9 +33,42 @@ Essas funções foram criadas para facilitar a busca e organização dos livros 
 2. Métodos **GET**: acessar título, autor, gênero e situação do livro;
 3. Métodos **SET**: atualizar informações do livro;
 4. Métodos de **empréstimo e devolução**.
-### 4️⃣: **Contas: ADM e Usuário** 🛠️
-#### 4.1: **Contas: ADM** 👤📚
-A conta com a função de Administrador será nosso construtor para criar, editar ou remover os livros. Ou seja, a pessoa que tiver o acesso e o poder administrativo desta conta, terá a liberdade para fazer tais funções mencionadas. Além de também poder emprestar, devolver e listar livros.
-#### 4.2: **Contas: Usuário** 🧑📚
-A conta com a função de bibliotecário só poderá listar, emprestar ou devolver livros. Não será possível fazer a edição, remoção ou criação de livros a não se for um administrador.
+#### 4.2: **Explicando a programação de cada arquivo**
+#### **Classes**
+A função `class Livro` foi utilizada no arquivo livros.py para ter a organização e definir os GETs/SETs para fazer os acessos/modificações das informações. Além disso, ele permite o controle de status para ver se o livro está disponivel ou emprestado.
+#### **GETs e SETs**
+**GET:** Usado para pegar/retornar o valor atribuído privado de uma classe.
+**SET:** Usado para manipular, ou seja, o SET é quem altera esse valor de forma controlada.
+Exemplo: 
+```python
+def _init_(self, titulo)
+    self.__titulo = titulo
+# -------------------------
+def getTitulo(self):
+    return self.__titulo
+# -------------------------
+def setTitulo(self, novo_titulo):
+    self.__titulo = novo_titulo
+```
+Isto também foi utilizado para "autor", "gênero" e "status".
 
+#### **Uso de Def**
+
+No projeto, foi utilizado para definir funções específicas, sendo no arquivo "funcoes.py". 
+
+**Funcoes.py**
+
+- **Listagem por ID**: Permite localizar e exibir informações de um livro a partir do seu identificador único.
+- **Listagem por Autor:** Permite buscar e exibir todos os livros de um determinado autor.
+- **Listagem por gênero:** Permite buscar e mostrar os livros por gênero.
+- **Listagem por disponíveis:** Faz a busca pelos livros disponíveis.
+- **Listagem por emprestados:** Procura quais livros no sistema já foram emprestados.
+- **Empréstimos**: Gerencia o processo de empréstimo de livros, atualizando a disponibilidade e registrando os dados do usuário.
+- **Devolução:** Faz a função de devolução de livros.
+- **Menu:** faz a construção do menu.
+
+### Conclusão 🔚
+
+Concluímos que nosso algorítmo sobre bibliotecas POO (Back-end), sua realização foi realizada e concluida com sucesso, afim de todos os componentes e funções estarem em funcionamento adequado e completo, realizando suas atividades pré definidas apartir das funções (DEFs).
+
+ 
