@@ -21,7 +21,7 @@ Documentação completa do projeto. Explicando cada detalhe registrado na progra
 |-------------|--------------------------------------------------------------|
 | Guilherme   | Listagem por autor, gênero e livros emprestados              |
 | Matheus     | Instanciação das classes e formatação lógica                 |
-| Moisés      | Adição e edição de livros (métodos SET)                      |
+| Moisés      | Retorno e edição de livros (SET)                             |
 | Gabriel     | Edição e formatação de livros emprestados e devolvidos       |
 | João Vitor  | Documentação completa do projeto no README.md                |
 ### **Funcionalidades** ⚙️
