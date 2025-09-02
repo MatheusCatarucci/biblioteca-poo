@@ -13,6 +13,7 @@ def ListagemPorID():
     for chave, Livro in biblioteca.items():
         status = "Disponível" if Livro.getStatus() else "Indisponível"
         print(f"ID: [{chave}] | Livro {status} | {Livro.getNome()} - {Livro.getAutor()}")
+        print ()
 
 
 def ListagemAutor():
@@ -26,6 +27,7 @@ def ListagemAutor():
         print(f'{autor}:')
         for nome in Livros:
             print(f'    - {nome}')
+        print ()
 
 
 def ListagemGenero():
@@ -39,6 +41,7 @@ def ListagemGenero():
         print(f'{genero}:')
         for nome in Livros:
             print(f'    - {nome}')
+        print ()
 
 
 def ListagemDisponiveis():
@@ -46,6 +49,7 @@ def ListagemDisponiveis():
     for chave, Livro in biblioteca.items():
         if Livro.getStatus():
             print(f"ID: [{chave}] || Livro: {Livro.getNome()} - {Livro.getAutor()}")
+        print ()
 
 
 def ListagemEmprestados():
@@ -53,6 +57,7 @@ def ListagemEmprestados():
     for chave, Livro in biblioteca.items():
         if not Livro.getStatus():
             print(f"ID: [{chave}] || Livro: {Livro.getNome()} - {Livro.getAutor()}")
+            print ()
 
 
 
