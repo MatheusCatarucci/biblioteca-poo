@@ -1,15 +1,19 @@
 import os
 from livros import biblioteca
 
+# Função para limpar a tela do terminal
 def limpar_tela():
     os.system("cls" if os.name == "nt" else "clear")
 
+
+# ====================
+# Funções de listagem
+# ====================
 def ListagemPorID():
     for chave, Livro in biblioteca.items():
-        if Livro.getStatus():
-            print(f"ID: [{chave}] |  Livro Disponível  | Livro: {Livro.getNome()} - {Livro.getAutor()}")
-        else:
-            print(f"ID: [{chave}] | Livro Indisponível | Livro: {Livro.getNome()} - {Livro.getAutor()}")
+        status = "Disponível" if Livro.getStatus() else "Indisponível"
+        print(f"ID: [{chave}] | Livro {status} | {Livro.getNome()} - {Livro.getAutor()}")
+
 
 def ListagemAutor():
     autores = {}
@@ -23,6 +27,7 @@ def ListagemAutor():
         for nome in Livros:
             print(f'    - {nome}')
 
+
 def ListagemGenero():
     generos = {}
     for Livro in biblioteca.values():
@@ -35,11 +40,13 @@ def ListagemGenero():
         for nome in Livros:
             print(f'    - {nome}')
 
+
 def ListagemDisponiveis():
     print('Livros disponíveis:')
     for chave, Livro in biblioteca.items():
         if Livro.getStatus():
             print(f"ID: [{chave}] || Livro: {Livro.getNome()} - {Livro.getAutor()}")
+
 
 def ListagemImprestados():
     print('Livros emprestados:')
@@ -47,6 +54,10 @@ def ListagemImprestados():
         if not Livro.getStatus():
             print(f"ID: [{chave}] || Livro: {Livro.getNome()} - {Livro.getAutor()}")
 
+
+# ====================
+# Funções de empréstimo e devolução
+# ====================
 def emprestimos():
     while True:
         limpar_tela()
@@ -72,6 +83,7 @@ def emprestimos():
             print("Livro indisponível para empréstimo.")
             input("Pressione Enter para continuar...")
         break
+
 
 def devolucao():
     while True:
@@ -103,6 +115,10 @@ def devolucao():
         if continuar != "s":
             break
 
+
+# ====================
+# Função de menu principal
+# ====================
 def menu():
     while True:
         limpar_tela()
