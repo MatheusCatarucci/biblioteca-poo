@@ -55,6 +55,7 @@ def ListagemEmprestados():
             print(f"ID: [{chave}] || Livro: {Livro.getNome()} - {Livro.getAutor()}")
 
 
+
 # ====================
 # Funções de empréstimo e devolução
 # ====================
@@ -90,7 +91,6 @@ def emprestimos():
             input("Pressione Enter para continuar...")
         break
 
-
 def devolucao():
     while True:
         limpar_tela()
@@ -120,6 +120,7 @@ def devolucao():
         continuar = input("Deseja devolver outro livro? (s/n): ").strip().lower()
         if continuar != "s":
             break
+
 
 
 # ====================
