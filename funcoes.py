@@ -94,3 +94,4 @@ def devolucao():
     continuar = input("Deseja devolver outro livro? (Sim/Não): ").strip().lower()
     if continuar != "sim":
         return
+
