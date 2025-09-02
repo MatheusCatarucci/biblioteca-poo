@@ -17,11 +17,13 @@ Arquivo principal do sistema, onde tudo será condicionado a inicializar a progr
 Documentação completa do projeto. Explicando cada detalhe registrado na programação construída.
 ### 3️⃣: **Programação do projeto**
 4 pessoas programaram o projeto com as seguintes funções declaradas. Uma pessoa fez a documentação. Sendo:
-1. Guilherme: Listagem por autor, gênero e livros emprestados;
-2. Matheus: Instanciação das classes e formatação lógica
-3. Moisés: Adição e edição de livros (SET);
-4. Gabriel: Edição e formatação de livros emprestados e devolvidos;
-5. João Vitor: Documentação completa do projeto no README.md
+| Nome        | Responsabilidade                                             |
+|-------------|--------------------------------------------------------------|
+| Guilherme   | Listagem por autor, gênero e livros emprestados              |
+| Matheus     | Instanciação das classes e formatação lógica                 |
+| Moisés      | Adição e edição de livros (métodos SET)                      |
+| Gabriel     | Edição e formatação de livros emprestados e devolvidos       |
+| João Vitor  | Documentação completa do projeto no README.md                |
 ### **Funcionalidades** ⚙️
 ### 3.1: **Funções Auxiliares**
 Essas funções foram criadas para facilitar a busca e organização dos livros dentro do sistema, permitindo filtrar por gênero, autor ou status de empréstimo:
