@@ -62,12 +62,18 @@ def emprestimos():
     while True:
         limpar_tela()
         ListagemPorID()
-        try:
-            id_do_livro = int(input("Insira o ID do livro desejado:\n--> "))
-        except ValueError:
+        id_input = input("Insira o ID do livro desejado:\n--> ")
+        if not id_input.isdigit():
             print("ID inválido!")
             os.system("pause")
             break
+        id_do_livro = int(id_input)
+
+        if id_do_livro not in biblioteca:
+            print("ID não encontrado!")
+            os.system("pause")
+            break
+
         limpar_tela()
         if biblioteca[id_do_livro].getStatus():
             print(f"Livro selecionado: {biblioteca[id_do_livro].getNome()} - {biblioteca[id_do_livro].getAutor()} | {biblioteca[id_do_livro].getGenero()}")
@@ -90,13 +96,13 @@ def devolucao():
         limpar_tela()
         print("=== Devolução de Livros ===")
         ListagemEmprestados()
-        try:
-            id_do_livro = int(input("Insira o ID do livro que você deseja devolver:\n--> "))
-        except ValueError:
+        id_input = input("Insira o ID do livro que você deseja devolver:\n--> ")
+        if not id_input.isdigit():
             print("ID inválido!")
             os.system("pause")
             break
-        limpar_tela()
+        id_do_livro = int(id_input)
+
         if id_do_livro in biblioteca and not biblioteca[id_do_livro].getStatus():
             print(f"Livro selecionado: {biblioteca[id_do_livro].getNome()} - {biblioteca[id_do_livro].getAutor()}")
             conf = input("Confirmar devolução? (s/n)\n---> ")
