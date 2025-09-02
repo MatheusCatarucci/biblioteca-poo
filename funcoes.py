@@ -41,6 +41,12 @@ def ListagemDisponiveis():
         if Livro.getStatus():
             print(f"ID: [{chave}] || Livro: {Livro.getNome()} - {Livro.getAutor()}")
 
+def ListagemImprestados():
+    print('Livros emprestados:')
+    for chave, Livro in biblioteca.items():
+        if not Livro.getStatus():
+            print(f"ID: [{chave}] || Livro: {Livro.getNome()} - {Livro.getAutor()}")
+
 def emprestimos():
     while True:
         limpar_tela()
@@ -54,46 +60,47 @@ def emprestimos():
         limpar_tela()
         if biblioteca[id_do_livro].getStatus():
             print(f"Livro selecionado: {biblioteca[id_do_livro].getNome()} - {biblioteca[id_do_livro].getAutor()} | {biblioteca[id_do_livro].getGenero()}")
-            conf = input("O Livro está disponível para empréstimo. Confirmar empréstimo? (y/n)\n---> ")
-            if conf.lower() == 'y':
+            conf = input("O livro está disponível para empréstimo. Confirmar empréstimo? (s/n)\n---> ")
+            if conf.lower() == 's':
                 biblioteca[id_do_livro].setStatus(False)
-                print(f"Você emprestou o livro ''{biblioteca[id_do_livro].getNome()}''. Aproveite a leitura!")
-                os.system('pause')
-            elif conf.lower() == 'n':
-                print("Saindo...")
+                print(f"Você emprestou o livro '{biblioteca[id_do_livro].getNome()}'. Aproveite a leitura!")
                 os.system('pause')
             else:
-                print("Nenhuma opção válida selecionada, saindo...")
+                print("Operação cancelada.")
                 os.system('pause')
         else:
             print("Livro indisponível para empréstimo.")
             input("Pressione Enter para continuar...")
         break
-    
+
 def devolucao():
     while True:
         limpar_tela()
-        print(" === Devolução de Livros === ")
-        nome_do_livro = input("Nome do livro que você deseja devolver:\n--> ")
+        print("=== Devolução de Livros ===")
+        ListagemImprestados()
+        try:
+            id_do_livro = int(input("Insira o ID do livro que você deseja devolver:\n--> "))
+        except ValueError:
+            print("ID inválido!")
+            os.system("pause")
+            break
         limpar_tela()
-        autor = input("Autor do livro que você irá devolver:\n--> ")
-        limpar_tela()
-        achado = False
-        for Livro in biblioteca.values():
-            if Livro.getNome().lower() == nome_do_livro.lower() and Livro.getAutor().lower() == autor.lower():
-                achado = True
-                if not Livro.getStatus():
-                    Livro.setStatus(True)
-                    print(f"Você devolveu o livro '{Livro.getNome()}'. Obrigado!")
-                else:
-                    print(f"O livro '{Livro.getNome()}' já está disponível na biblioteca.")
-                break
-        if not achado:
-            print("Livro não encontrado. Verifique os detalhes e tente novamente.")
-        input("Pressione Enter para continuar...")
+        if id_do_livro in biblioteca and not biblioteca[id_do_livro].getStatus():
+            print(f"Livro selecionado: {biblioteca[id_do_livro].getNome()} - {biblioteca[id_do_livro].getAutor()}")
+            conf = input("Confirmar devolução? (s/n)\n---> ")
+            if conf.lower() == 's':
+                biblioteca[id_do_livro].setStatus(True)
+                print(f"Você devolveu o livro '{biblioteca[id_do_livro].getNome()}'. Obrigado!")
+                os.system('pause')
+            else:
+                print("Operação cancelada.")
+                os.system('pause')
+        else:
+            print("ID inválido ou livro já disponível.")
+            os.system('pause')
 
-        continuar = input("Deseja devolver outro livro? (Sim/Não): ").strip().lower()
-        if continuar != "sim":
+        continuar = input("Deseja devolver outro livro? (s/n): ").strip().lower()
+        if continuar != "s":
             break
 
 def menu():
